@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "numberFrom": {
+      "type": "integer"
+    },
+    "numberTo": {
+      "type": "integer",
+      "unique": false
+    },
+    "facebookLink": {
+      "type": "string"
+    },
+    "instagramLink": {
+      "type": "string"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "Beginner",
+        "Medium",
+        "Advanced"
+      ],
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Vue",
+        "MIX"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 20
+    }
+  }
+}
